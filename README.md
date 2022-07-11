@@ -36,7 +36,7 @@ The packages enable the calculation of the Hubbard U term, as a function of 1D o
 * `omegaperp` the trapping frequency of the 2D harmonic confinement.
 
 The parameters in quasi-2D are:
-* `vupx' the depth of the optical lattice for the spin-up atoms along the x dimension
+* `vupx` the depth of the optical lattice for the spin-up atoms along the x dimension
 * `vupy`, `vdownx` and `vdowny` follow the same definitions
 * `omegaz` the trapping frequency of the 1D harmonic confinement.
 
