@@ -1,9 +1,9 @@
 # Microscopic calculation of Hubbard parameters for quantum gas microscopes
 A package for the calculation of the Hubbard on-site interaction U for quantum gas microscopes, or more generally, cold atoms in optical lattices. This package is written in *Mathematica* and is currently applicable to quasi-1D and quasi-2D square optical lattices. 
 
-## Basics of the physics
+## How it works
 
-The Hubbard U term is calculated such that the Hubbard scattering amplitude `fHubbard` reproduces the exact scattering amplitude `fexact` for two atoms. In particular for relative and centre-of-mass quasi-momentum `p` and `q`, respectively, the scattering amplitudes are equated in the limit of `p` to zero. This packages, automates the calculation and equating of the Hubbard and exact scattering amplitudes.
+The Hubbard U term is calculated such that the Hubbard scattering amplitude reproduces the exact scattering amplitude for two atoms. In particular for relative and centre-of-mass quasi-momentum `p` and `q`, respectively, the scattering amplitudes are equated in the limit of `p` to zero. This packages automates the calculation and equating of the Hubbard and exact scattering amplitudes.
 
 For more details please see the associated research paper freely available on the arXiv.
 
