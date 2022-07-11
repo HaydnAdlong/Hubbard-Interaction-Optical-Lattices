@@ -1,4 +1,4 @@
-# Microscopic calculation of Hubbard parameters for ultracold atoms for quantum gas microscopes
+# Microscopic calculation of Hubbard parameters for quantum gas microscopes
 A package for the calculation of the Hubbard on-site interaction U for cold atoms for quantum gas microscopes. This package is written in *Mathematica* and is currently applicable to quasi-1D and quasi-2D square optical lattices. 
 
 ## Basics of the physics
