@@ -8,7 +8,7 @@ In this package we use units where `m=hbar=d=1` with
 * `hbar` the reduced Planck's constant
 * `d` the lattice spacing.
 
-In these units the recoil energy is $`Vrec=pi^2/2`$.
+In these units the recoil energy is `Vrec=pi^2/2`.
 
 The standard notation includes
 * `q` the centre of mass momentum
@@ -34,6 +34,7 @@ The packages enable the calculation of the Hubbard U term, as a function of 1D o
 * `vup` the depth of the optical lattice for the spin-up atoms
 * `vdown` the depth of the optical lattice for the spin-down atoms
 * `omegaperp` the trapping frequency of the 2D harmonic confinement.
+
 The parameters in quasi-2D are:
 * `vupx' the depth of the optical lattice for the spin-up atoms along the x dimension
 * `vupy`, `vdownx` and `vdowny` follow the same definitions
