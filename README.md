@@ -22,7 +22,7 @@ In this package the units are set by `m=hbar=d=1` with
 
 
 ### Quasi-1D optical lattice
-The key function in quasi-1D is `setupHubbardUQuasi1D[vup, vdown, convParam, pOnShell, q, omegaperp]' which outputs the Hubbard U as a function of `a1dinv` (the inverse 1D scattering length). The inputs of the function are:
+The key function in quasi-1D is `setupHubbardUQuasi1D[vup, vdown, convParam, pOnShell, q, omegaperp]` which outputs the Hubbard U as a function of `a1dinv` (the inverse 1D scattering length). The inputs of the function are:
 * `vup`: depth of the optical lattice for the spin-up atoms
 * `vdown`: depth of the optical lattice for the spin-down atoms
 * `convParam`: convergence parameter for the integrals and sums, which takes on any non-zero integer (typically a value < 10 will suffice)
