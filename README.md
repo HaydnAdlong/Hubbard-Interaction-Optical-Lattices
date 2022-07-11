@@ -1,11 +1,16 @@
 # Microscopic calculation of Hubbard parameters for ultracold atoms for quantum gas microscopes
-A package for the calculation of the Hubbard on-site interaction U for cold atoms for quantum gas microscopes. This package is written in *Mathematica* and is currently applicable to quasi-1D and quasi-2D square optical lattices. For technical details on the code, please see the associated research paper freely available on the arXiv.
+A package for the calculation of the Hubbard on-site interaction U for cold atoms for quantum gas microscopes. This package is written in *Mathematica* and is currently applicable to quasi-1D and quasi-2D square optical lattices. 
 
+## Basics of the physics
+
+The Hubbard U term is calculated such that the Hubbard scattering amplitude `fHubbard` reproduces the exact scattering amplitude `fexact` for two atoms. In particular for relative and centre-of-mass quasi-momentum `p` and `q`, respectively, the scattering amplitudes are equated in the limit of `p` to zero. This packages, automates the calculation and equating of the Hubbard and exact scattering amplitudes.
+
+For more details please see the associated research paper freely available on the arXiv.
 
  ## Using the package
  
  ### Getting started
- To begin decide on the relevant package:
+ To begin, decide on the relevant package:
  - **1DHubbardParameters** for quasi-1D optical lattices
  - **2DHubbardParameters** for quasi-2D square optical lattices
 
@@ -47,7 +52,7 @@ yielding
 
 Introducing the 3D scattering length via `a1dinvFunc[a3d_] := `, then yields Fig. from the associated research paper
 
-The limit of taking relative quasi-momentum to zero can be tested by reducing the value to `pOnShell' (e.g. `pOnShell = 0.025`, and the convergence can be tested by increasing the value of `convParam` (e.g. `convParam = 5`).
+The limit of taking relative quasi-momentum to zero can be tested by reducing the value to `pOnShell` (e.g. `pOnShell = 0.025`, and the convergence can be tested by increasing the value of `convParam` (e.g. `convParam = 5`).
 
 
 
