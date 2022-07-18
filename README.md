@@ -49,6 +49,8 @@ Plot[
  ]
 ```
 yielding
+<img width="360" alt="image" src="https://user-images.githubusercontent.com/93458010/179492129-5900721c-6021-43c1-a66e-70361cae7549.png">
+
 
 Introducing the 3D scattering length via `a1dinvFunc[a3d_] := `, then yields Fig. from the associated research paper
 
