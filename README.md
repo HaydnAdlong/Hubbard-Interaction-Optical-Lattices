@@ -37,7 +37,7 @@ The key function in quasi-1D is `setupHubbardUQuasi1D[vup, vdown, convParam, pOn
 
 The following is an example of using the function, with experimentally feasible parameters:
 ```
-uFunc1D = setupHubbardUQuasi1D[vup = 12 Vrec, vdown = 12 Vrec, convParam = 4, pOnShell = 0.05, q = 0, omegaperp = 40]
+uFunc1D = setupHubbardUQuasi1D[vup = 12 Vrec, vdown = 12 Vrec, pOnShell = 0.05, q = 0, omegaperp = 40, convParam = 4]
 ```
 The function `uFunc1D` can now be plotted
 ```
