@@ -14,7 +14,7 @@ For more details please see the associated research paper freely available on th
  - **1DHubbardParameters** for quasi-1D optical lattices
  - **2DHubbardParameters** for quasi-2D square optical lattices
 
-Download the relevant package and then the package can then be loaded into a Mathematica notebook using, e.g.,
+Download the relevant package and then the package can then be loaded into a Mathematica notebook using
 ```
 Get[<path-to-1DHubbardParameters.wl>];
 ```
