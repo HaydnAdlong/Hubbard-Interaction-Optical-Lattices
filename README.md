@@ -49,7 +49,23 @@ Plot[
  ]
 ```
 yielding
+
 <img width="360" alt="image" src="https://user-images.githubusercontent.com/93458010/179492129-5900721c-6021-43c1-a66e-70361cae7549.png">
+
+One can also introduce the 3D scattering length via
+```
+lperp = 1/Sqrt[omegaperp];
+a1dinvFunc[a3d_] := (-2 (lperp/2 (lperp/a3d + Zeta[1/2]/Sqrt[2])))^-1
+```
+which yields Fig from the associated research paper
+```
+Plot[
+ uFunc1D[a1dinv],
+ {a1dinv, -20, 20},
+ Frame -> True,
+ FrameLabel -> {"a3d/d", "U/m d^2"}
+ ]
+```
 
 
 Introducing the 3D scattering length via `a1dinvFunc[a3d_] := `, then yields Fig. from the associated research paper
