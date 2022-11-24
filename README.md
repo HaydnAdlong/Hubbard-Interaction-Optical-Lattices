@@ -56,7 +56,7 @@ One can also introduce the 3D and 1D scattering length relationship
 lperp = 1/Sqrt[omegaperp];
 a1dinvFunc[a3d_] := (-2 (lperp/2 (lperp/a3d + Zeta[1/2]/Sqrt[2])))^-1
 ```
-which yields Fig. ??? from the associated research paper
+Then, `uFunc1D` can now be plotted as a function of the 3D scattering length
 ```
 Plot[
   uFunc1D[a1dinvFunc@a3d],
@@ -76,10 +76,6 @@ The limit of zero relative quasi-momentum can be tested by reducing the value to
 ## old
 
 
-Introducing the 3D scattering length via `a1dinvFunc[a3d_] := `, then yields Fig. from the associated research paper
-
-
- ## Code units and notation
 
 
 In these units the recoil energy is `Vrec=pi^2/2`.
@@ -107,21 +103,6 @@ As discussed in the paper the calculation is based on the exact calculation of t
 
 There are two options to performing this calculation depending on how much control the user wants. The key difference between these approaches is the control over the convergence parameters for the integrals and sums.
 
-### Calculating U: The simple option
-The simple option lumps all of the convergence parameters into a single parameter `convParameter`: the parameter takes on any non-zero integer, where a larger value yields a higher degree of convergence. Here is an example of using the code for quasi-1D
-```
-uFunc1D = setupHubbardUQuasi1D[vup = 12 Vrec, vdown = 12 Vrec, convParam = 4, pOnShell = 0.05, q = 0, omegaperp = 40]
-```
-Here, uFunc1D is a function of a 1D scattering length. For example, it can be plot using
-
-Note:
-- To test the convergence of the code, test the effect of increasing convParm (typically by a single integer, e.g. 4 to 5).
-- To test that 
-
-### Calculating U: The involved option
-
- 
- 
  
  ## Citing this package
 This package
