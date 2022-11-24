@@ -3,7 +3,7 @@ A package for the calculation of the Hubbard on-site interaction U for cold atom
 
 ## How it works
 
-The Hubbard U term is calculated such that the Hubbard scattering amplitude reproduces the exact scattering amplitude for two atoms in the limit of zero relative momentum (denoted throughout by `p`). This packages automates the calculation and equating of the Hubbard and exact scattering amplitudes.
+The Hubbard U term is calculated such that the Hubbard scattering amplitude reproduces the exact scattering amplitude for two atoms in the limit of vanishing relative momentum. This packages automates the calculation and equating of the Hubbard and exact scattering amplitudes.
 
 For more details please see the associated research paper freely available on the arXiv.
 
