@@ -42,7 +42,7 @@ The function `uFunc1D` can now be plotted
 ```
 Plot[
  uFunc1D[a1dinv],
- {a1dinv, -20, 20},
+ {a1dinv, -30, 30},
  Frame -> True,
  FrameLabel -> {"d/a1D", "U/m d^2"}
  ]
