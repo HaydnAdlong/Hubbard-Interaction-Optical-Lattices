@@ -30,7 +30,7 @@ In this package the units are set by `m=hbar=d=1` with
 The key function in quasi-1D is `setupHubbardUQuasi1D[vup, vdown, pOnShell, omegaperp, convParam]` which outputs the Hubbard U as a function of `a1dinv` (the inverse 1D scattering length). The inputs of the function are:
 * `vup`: depth of the optical lattice for the spin-up atoms [in units of `1/md^2`]
 * `vdown`: depth of the optical lattice for the spin-down atoms [in units of `1/md^2`]
-* `convParam`: convergence parameter for the integrals and sums, which takes on any non-zero integer (typically a value < 10 will suffice)
+* `convParam`: convergence parameter for the integrals and sums, which takes on any non-zero integer (typically a value < 5 will suffice)
 * `pOnShell`: relative quasi-momentum for equating the exact and Hubbard scattering amplitudes (must be taken as a limit to zero, but values around 0.05 typically suffice) [in units of `1/d`]
 * `omegaperp` the trapping frequency of the 2D harmonic confinement [in units of `1/md^2`].
 
