@@ -109,7 +109,7 @@ FrameLabel -> {"a3d/d", "U/m d^2"}
 The limit of zero relative quasi-momentum can be tested by reducing the value to `pOnShellx` and `pOnShelly`, and the convergence can be tested by increasing the value of `convParam` (e.g. `convParam = 4`).
 
 ## Additional functionalities
-We have reduced the complexity of determining the Hubbard U parameter by wrapping all of the various convergence parameters (e.g. size of integration grids) into a single parameter we term `convParam`. This of course comes at the price of better user control of the calculation. Users who wish to understand how to control all of the various parameters are welcome to email hadlong@phys.ethz.ch for further instructions and guides. Users who are seeking an additional functionality (such as using the code on a different lattice geometry) are welcome to email any of the authors of the paper.
+We have reduced the complexity of determining the Hubbard U parameter by wrapping all of the various convergence parameters (e.g. the size of integration grids) into a single parameter we term `convParam`. This of course comes at the price of better user control of the calculation. Users who wish to understand how to control all of the various parameters are welcome to email hadlong@phys.ethz.ch for further instructions and guides. Users who are seeking an additional functionality (such as using the code with a different lattice geometry) are welcome to email any of the authors of the paper.
 
  ## Citing this package
 This package [fill in]
