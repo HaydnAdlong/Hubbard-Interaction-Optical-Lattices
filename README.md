@@ -3,9 +3,9 @@ A package for the calculation of the Hubbard on-site interaction U for cold atom
 
 ## How it works
 
-The Hubbard U term is calculated such that the Hubbard scattering amplitude reproduces the exact scattering amplitude for two atoms in the limit of vanishing relative momentum. This packages automates the calculation and equating of the Hubbard and exact scattering amplitudes.
+The Hubbard U term is calculated such that the Hubbard scattering amplitude reproduces the exact scattering amplitude for two atoms in the limit of vanishing relative momentum. This packages automates the calculation.
 
-For more details please see the associated research paper freely available on the arXiv.
+For more details please see the associated research paper freely available on the arXiv [arxiv link].
 
  ## Using the package
  
@@ -27,7 +27,7 @@ In this package the units are set by `m=hbar=d=1` with
 
 
 ### Quasi-1D optical lattice
-The key function in quasi-1D is `setupHubbardUQuasi1D[vup, vdown, convParam, pOnShell, omegaperp]` which outputs the Hubbard U as a function of `a1dinv` (the inverse 1D scattering length). The inputs of the function are:
+The key function in quasi-1D is `setupHubbardUQuasi1D[vup, vdown, pOnShell, omegaperp, convParam]` which outputs the Hubbard U as a function of `a1dinv` (the inverse 1D scattering length). The inputs of the function are:
 * `vup`: depth of the optical lattice for the spin-up atoms [in units of `1/md^2`]
 * `vdown`: depth of the optical lattice for the spin-down atoms [in units of `1/md^2`]
 * `convParam`: convergence parameter for the integrals and sums, which takes on any non-zero integer (typically a value < 10 will suffice)
@@ -70,39 +70,42 @@ Plot[
 
 The limit of zero relative quasi-momentum can be tested by reducing the value to `pOnShell` (e.g. `pOnShell = 0.025`), and the convergence can be tested by increasing the value of `convParam` (e.g. `convParam = 5`).
 
+### Quasi-2D optical lattice
+The key function in quasi-2D is `setupHubbardUQuasi2D[vupx, vdownx, vupy, vdowny, pOnShellx, pOnShelly, omegaz, convParam]` which outputs the Hubbard U as a function of `loga2dinv` (the log of the inverse of the 2D scattering length). The inputs of the function are the same as the quasi-1D with an additional directional component (e.g. vupx is the depth of the optical lattice for the spin-up atoms along the x-direction), and omegaperp is replaced by omegaz (the trapping frequency of the 1D harmonic confinement).
 
+The calculation in quasi-2D is significantly more computationally demanding than in quasi-1D, and takes more time to complete. We have therefore added in a progress monitor that displays during the calculation.
 
+The following is an example of using the function, with experimentally feasible parameters:
+```
+uFunc2D = setupHubbardUQuasi2D[vupx = 12 Vrec, vupy = 12 Vrec, vdownx = 12 Vrec, vdowny = 12 Vrec, pOnShellx = 0.05, pOnShelly = 0.05, omegaz = 40, convParam = 3]
+```
 
-## old
+The function `uFunc2D` can now be plotted
+```
+Plot[uFunc2D[loga2dinv],
+{loga2dinv, -2, 5},
+Frame -> True, 
+FrameLabel -> {"Log[1/a2D]", "U/m d^2"}
+]
+```
+yielding
 
+<img width="365" alt="image" src="https://github.com/HaydnAdlong/cold-atom-hubbard-parameters/assets/93458010/f69aa257-9f66-44fd-85e9-f9bbb2f644c0">
 
+One can also introduce the 3D and 2D scattering length relationship
+```
+lz = 1/Sqrt[omegaz];
+loga2dinvFunc[a3d_] := Log[(lz Sqrt[\[Pi]/0.905]*Exp[-((Sqrt[\[Pi]] lz)/(Sqrt[2] a3d))])^-1]
+```
+Then, `uFunc2D` can now be plotted as a function of the 3D scattering length
+```
+Plot[uFunc2D[loga2dinvFunc@a3d],
+{a3d, -1, 1},
+Frame -> True, 
+FrameLabel -> {"a3d/d", "U/m d^2"}
+]
+```
+<img width="373" alt="image" src="https://github.com/HaydnAdlong/cold-atom-hubbard-parameters/assets/93458010/8e56afbe-8125-48b5-8cd5-25919116bf18">
 
-
-In these units the recoil energy is `Vrec=pi^2/2`.
-
-The standard notation includes
-* `q` the centre of mass momentum
-* `p` the incoming relative momentum
-* `k` the relative momentum for integrating
-* `tSigmaDirection` the hopping parameter of spin-sigma species along a direction (e.g. x or y in quasi-2D)
-
-
-
-
-The packages enable the calculation of the Hubbard U term, as a function of 1D or 2D scattering length. This calculation depends on the optical lattice parameters, which in quasi-1D are:
-* `vup` the depth of the optical lattice for the spin-up atoms
-* `vdown` the depth of the optical lattice for the spin-down atoms
-* `omegaperp` the trapping frequency of the 2D harmonic confinement.
-
-The parameters in quasi-2D are:
-* `vupx` the depth of the optical lattice for the spin-up atoms along the x dimension
-* `vupy`, `vdownx` and `vdowny` follow the same definitions
-* `omegaz` the trapping frequency of the 1D harmonic confinement.
-
-As discussed in the paper the calculation is based on the exact calculation of the 2-particle scattering amplitude at (quasi) centre-of-mass momentum `q` and (quasi) relative on-shell momentum `pOnShell`. In quasi-2D, these parameters also involve a direction (i.e., `qx, qy, pOnShellx, pOnShelly`). The calculation requires the limit of `pOnShell` to zero.
-
-There are two options to performing this calculation depending on how much control the user wants. The key difference between these approaches is the control over the convergence parameters for the integrals and sums.
-
- 
  ## Citing this package
-This package
+This package [fill in]
