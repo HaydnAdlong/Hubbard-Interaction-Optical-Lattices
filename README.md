@@ -49,8 +49,7 @@ Plot[
 ```
 yielding
 
-<img width="360" alt="image" src="https://user-images.githubusercontent.com/93458010/203864975-0f0c101c-9f2b-4ceb-b8f8-89295492f93d.png">
-
+<img width="373" alt="image" src="https://github.com/HaydnAdlong/cold-atom-hubbard-parameters/assets/93458010/8e301b81-316b-4035-86f9-1c8edb24ae4a">
 
 One can also introduce the 3D and 1D scattering length relationship
 ```
@@ -66,7 +65,7 @@ Plot[
   FrameLabel -> {"a3d/d", "U/m d^2"}
   ]
 ```
-<img width="360" alt="image" src="https://user-images.githubusercontent.com/93458010/203864943-3483c5e5-1a26-4e07-8805-d8bca6913af3.png">
+<img width="373" alt="image" src="https://github.com/HaydnAdlong/cold-atom-hubbard-parameters/assets/93458010/e7932fbc-5cce-4647-aeab-62215308e315">
 
 The limit of zero relative quasi-momentum can be tested by reducing the value to `pOnShell` (e.g. `pOnShell = 0.025`), and the convergence can be tested by increasing the value of `convParam` (e.g. `convParam = 5`).
 
@@ -106,6 +105,8 @@ FrameLabel -> {"a3d/d", "U/m d^2"}
 ]
 ```
 <img width="373" alt="image" src="https://github.com/HaydnAdlong/cold-atom-hubbard-parameters/assets/93458010/8e56afbe-8125-48b5-8cd5-25919116bf18">
+
+The limit of zero relative quasi-momentum can be tested by reducing the value to `pOnShellx` and `pOnShelly`, and the convergence can be tested by increasing the value of `convParam` (e.g. `convParam = 4`).
 
  ## Citing this package
 This package [fill in]
