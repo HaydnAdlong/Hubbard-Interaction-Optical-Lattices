@@ -717,7 +717,7 @@ setupTMatrixOnShellQuasi2D[vupx_, vdownx_, vupy_, vdowny_, nCMmax_, nRelmax_, nk
 (*Quasi-2D Hubbard U calculation*)
 
 
-setupHubbardUQuasi2D[vupx_, vdownx_, vupy_, vdowny_, nCMmax_, nRelmax_, nkReg_, nkPoleCirc_, n\[Theta]PoleCirc_, nkPoleSquare_, pOnShellx_, pOnShelly_, \[Omega]z_, nkHubbard_, n\[Theta]Hubbard_, \[CapitalLambda]_] := Module[
+setupHubbardUQuasi2DAllParams[vupx_, vdownx_, vupy_, vdowny_, nCMmax_, nRelmax_, nkReg_, nkPoleCirc_, n\[Theta]PoleCirc_, nkPoleSquare_, pOnShellx_, pOnShelly_, \[Omega]z_, nkHubbard_, n\[Theta]Hubbard_, \[CapitalLambda]_] := Module[
 	{
 		tupx, tdownx, tupy, tdowny, hubbardTMatrixInt, effMassHubbard, TMatrixOnShellQuasi2D, hubbardUQuasi2D,
 		lowEnergyGridSize
@@ -746,4 +746,4 @@ setupHubbardUQuasi2D[vupx_, vdownx_, vupy_, vdowny_, nCMmax_, nRelmax_, nkReg_, 
 (*Quasi-2D Hubbard U calculation with automated convergence*)
 
 
-setupHubbardUQuasi2D[vupx_, vdownx_, vupy_, vdowny_, pOnShellx_, pOnShelly_, \[Omega]z_, convParam_] := setupHubbardUQuasi2D[vupx, vdownx, vupy, vdowny, convParam * 2 + 3, convParam * 3 + 5, convParam * 3 + 6, 8 + convParam * 5, 8 + convParam * 5, 8 + convParam * 5, pOnShellx, pOnShelly, \[Omega]z,  50 + convParam * 10, 50 + convParam * 10, 1000 + convParam * 1000]
+setupHubbardUQuasi2D[vupx_, vdownx_, vupy_, vdowny_, pOnShellx_, pOnShelly_, \[Omega]z_, convParam_] := setupHubbardUQuasi2DAllParams[vupx, vdownx, vupy, vdowny, convParam * 2 + 2, convParam * 3 + 2, convParam * 3 + 4, 4 + convParam * 5, 4 + convParam * 5, 4 + convParam * 5, pOnShellx, pOnShelly, \[Omega]z,  40 + convParam * 10, 40 + convParam * 10, 1000 + convParam * 1000]
